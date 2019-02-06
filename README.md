@@ -1,6 +1,6 @@
 # phaser-game-template
 
-Phaser Game Boilerplate.
+Phaser Game Template.
 
 ## Install
 
@@ -13,11 +13,8 @@ $ npm i
 ## Usage
 
 - `npm run dev`: start the Webpack Dev Server in watch mode (target: `src`) and open the browser
-
 - `npm run lint`: run `tslint` on the codebase using the rules specificed in `tslint.json`
-
 - `npm run build`: compile and minify the source making it ready for deploy
-
 - `npm run typings:update`: update the typings definition for Phaser
 
 ### Phaser 3 typings definitions
