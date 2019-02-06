@@ -59,3 +59,9 @@ typings/
 
 # next.js build output
 .next
+
+# Distributable
+dist
+
+# Visual Studio Code files
+.vscode
