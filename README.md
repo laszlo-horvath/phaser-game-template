@@ -23,6 +23,10 @@ Phaser's type definitions are included in this repository since they are not ava
 
 ## Credits
 
+Inspired by:
 * [https://github.com/gvinaccia/phaser-starter](https://github.com/gvinaccia/phaser-starter)
 * [https://github.com/justweb/ts-template](https://github.com/justweb/ts-template)
 * [https://github.com/troyedwardsjr/phaser3-typescript-webpack](https://github.com/troyedwardsjr/phaser3-typescript-webpack)
+
+Sound effects:
+* [https://www.zapsplat.com](https://www.zapsplat.com)
