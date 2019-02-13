@@ -7,6 +7,7 @@ export class PreloadScene extends Phaser.Scene {
   private loadingBar!: Phaser.GameObjects.Graphics;
   private progressBar!: Phaser.GameObjects.Graphics;
   private bitmapTexts: Phaser.GameObjects.BitmapText[] = [];
+  private LOADING_BAR_BORDER: number = 5;
 
   constructor() {
     super({
@@ -33,7 +34,7 @@ export class PreloadScene extends Phaser.Scene {
     this.loadingBar = this.add.graphics();
     this.loadingBar.fillStyle(0xfff6d3);
 
-    var canvasWidth = this.sys.canvas.width;
+    const canvasWidth = this.sys.canvas.width;
     this.loadingBar.fillRect(canvasWidth / 2 - canvasWidth / 4, this.sys.canvas.height / 1.5, canvasWidth / 2, 50);
 
     this.progressBar = this.add.graphics();
@@ -43,15 +44,18 @@ export class PreloadScene extends Phaser.Scene {
     this.load.on('progress', (value: number) => {
       this.progressBar.clear();
       this.progressBar.fillStyle(0x5dae47, 1);
-      this.progressBar.fillRect(0, 0, 2 * value, 40);
 
-      var canvasWidth = this.sys.canvas.width;
-      this.progressBar.fillRect(canvasWidth / 2 - canvasWidth / 4 + 5, this.sys.canvas.height / 1.5 + 5, (canvasWidth / 2 - 10) * value, 50 - 10);
+      const canvasWidth = this.sys.canvas.width;
+      this.progressBar.fillRect(
+        canvasWidth / 2 - canvasWidth / 4 + this.LOADING_BAR_BORDER,
+        this.sys.canvas.height / 1.5 + this.LOADING_BAR_BORDER,
+        (canvasWidth / 2 - this.LOADING_BAR_BORDER * 2) * value, 50 - this.LOADING_BAR_BORDER * 2
+      );
     });
   }
 
   addTexts() {
-    var loadingText = this.add.bitmapText(this.sys.canvas.width / 2, this.sys.canvas.height / 2 - 150, Fonts.MAIN, 'LOADING', 45);
+    const loadingText = this.add.bitmapText(this.sys.canvas.width / 2, this.sys.canvas.height / 2 - 150, Fonts.MAIN, 'LOADING', 45);
     loadingText.setX(loadingText.x - loadingText.width / 2);
     this.bitmapTexts.push(loadingText);
   }

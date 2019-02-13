@@ -27,16 +27,16 @@ export class MenuScene extends Phaser.Scene {
   }
 
   addTexts() {
-    var centerX = this.sys.canvas.width / 2;
-    var centerY = this.sys.canvas.height / 2;
+    const centerX = this.sys.canvas.width / 2;
+    const centerY = this.sys.canvas.height / 2;
 
-    var pressEnterText = this.add.bitmapText(centerX, centerY, Fonts.MAIN, 'PRESS ENTER TO PLAY', 45);
+    const pressEnterText = this.add.bitmapText(centerX, centerY, Fonts.MAIN, 'PRESS ENTER TO PLAY', 45);
     pressEnterText.setX(pressEnterText.x - pressEnterText.width / 2);
     this.bitmapTexts.push(pressEnterText);
   }
 
   addSprites() {
-    var volumeSprite = this.add.image(this.sys.canvas.width - 50, 50, Sprites.VOLUME, this.game.sound.mute ? 1 : 0);
+    const volumeSprite = this.add.image(this.sys.canvas.width - 50, 50, Sprites.VOLUME, this.game.sound.mute ? 1 : 0);
     volumeSprite.setInteractive();
 
     volumeSprite.on('pointerup', () => {
