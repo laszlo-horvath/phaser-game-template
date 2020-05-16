@@ -1,7 +1,7 @@
 
 import { BootScene, PreloadScene, MenuScene, GameScene } from './scenes';
 
-const config: GameConfig = {
+const config: Phaser.Types.Core.GameConfig = {
   title: 'Your Game',
   version: '1.0',
 
@@ -25,7 +25,7 @@ const config: GameConfig = {
 };
 
 export class Game extends Phaser.Game {
-  constructor(config: GameConfig) {
+  constructor(config: Phaser.Types.Core.GameConfig) {
     super(config);
   }
 }
