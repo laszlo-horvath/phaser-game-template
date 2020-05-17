@@ -10,22 +10,26 @@ const phaser = path.join(phaserModule, 'src/phaser.js')
 
 module.exports = {
   devtool: isProduction ? 'none' : 'inline-source-map',
+
   entry: {
     main: [
       './src/game.ts',
     ],
     vendor: ['phaser']
   },
+
   output: {
     path: path.join(__dirname, 'dist'),
     filename: '[name].bundle.js'
   },
+
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
     alias: {
       phaser: phaser
     }
   },
+
   module: {
     rules: [
       {
@@ -38,16 +42,19 @@ module.exports = {
       }
     ]
   },
+
+  optimization: {
+    splitChunks: {
+      name: 'vendor',
+      filename: 'vendor.bundle.js'
+    }
+  },
+
   plugins: [
     new webpack.DefinePlugin({
       __DEV__: JSON.stringify(JSON.parse(process.env.BUILD_DEV || 'true')),
       WEBGL_RENDERER: true,
       CANVAS_RENDERER: true
-    }),
-
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      filename: 'vendor.bundle.js'
     }),
 
     new HtmlWebpackPlugin({
@@ -56,8 +63,10 @@ module.exports = {
       chunks: ['vendor', 'main']
     }),
 
-    new CopyWebpackPlugin([
-      { from: 'src/assets/', to: 'assets/' }
-    ])
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'src/assets/', to: 'assets/' }
+      ],
+    })
   ]
 }
