@@ -5,9 +5,14 @@ const config: Phaser.Types.Core.GameConfig = {
   title: 'Your Game',
   version: '1.0',
 
-  // Canvas size
-  width: 800,
-  height: 600,
+  // Canvas scale
+  scale: {
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+    parent: 'game-container',
+    width: 750,
+    height: 1334
+  },
 
   // Automatically detect supported rendering engine to use (e.g. Canvas, WebGL)
   type: Phaser.AUTO,
