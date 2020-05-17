@@ -65,3 +65,6 @@ dist
 
 # Visual Studio Code files
 .vscode
+
+# other
+.DS_Store
