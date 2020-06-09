@@ -26,11 +26,21 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
     alias: {
+      // general
       phaser: phaser,
-      sprites: path.resolve(__dirname, 'src/assets/sprites/keys.ts'),
-      fonts: path.resolve(__dirname, 'src/assets/fonts/keys.ts'),
-      audio: path.resolve(__dirname, 'src/assets/audio/keys.ts'),
+
+      // assets
+      audio: path.resolve(__dirname, 'src/assets/audio/'),
+      fonts: path.resolve(__dirname, 'src/assets/fonts/'),
+      images: path.resolve(__dirname, 'src/assets/images/'),
+      sprites: path.resolve(__dirname, 'src/assets/sprites/'),
+
+      // src
+      config: path.resolve(__dirname, 'src/config/'),
       prefabs: path.resolve(__dirname, 'src/prefabs'),
+      typings: path.resolve(__dirname, 'src/typings'),
+      objects: path.resolve(__dirname, 'src/objects'),
+      scenes: path.resolve(__dirname, 'src/scenes'),
     }
   },
 
