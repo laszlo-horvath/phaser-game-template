@@ -1,5 +1,5 @@
-import { Scenes } from './keys';
 import 'phaser';
+import { Scenes } from 'scenes/keys';
 
 export class BootScene extends Phaser.Scene {
   constructor() {

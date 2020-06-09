@@ -1,7 +1,7 @@
-import { Scenes } from './keys';
-import { Fonts } from './../assets/fonts/keys';
-import { Sounds } from './../assets/audio/keys';
-import { Sprites } from './../assets/sprites/keys';
+import { Scenes } from 'scenes/keys';
+import { Fonts } from 'fonts/keys';
+import { Sounds } from 'audio/keys';
+import { Sprites } from 'sprites/keys';
 
 export class PreloadScene extends Phaser.Scene {
   private loadingBar!: Phaser.GameObjects.Graphics;

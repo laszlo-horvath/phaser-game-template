@@ -1,7 +1,7 @@
-import { Scenes } from './keys';
-import { Fonts } from './../assets/fonts/keys';
-import { Sounds } from './../assets/audio/keys';
-import { Sprites } from './../assets/sprites/keys';
+import { Scenes } from 'scenes/keys';
+import { Fonts } from 'fonts/keys';
+import { Sounds } from 'audio/keys';
+import { Sprites } from 'sprites/keys';
 
 export class MenuScene extends Phaser.Scene {
   private startKey!: Phaser.Input.Keyboard.Key;

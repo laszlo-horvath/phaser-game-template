@@ -1,3 +1,16 @@
+export const getPointerFromScene = (scene: Phaser.Scene) => {
+  let pointer = null;
+
+  // Support touch and mouse pointers
+  if (scene.input.mousePointer.isDown) {
+    pointer = scene.input.mousePointer;
+  } else if (scene.input.pointer1.isDown) {
+    pointer = scene.input.pointer1;
+  }
+
+  return pointer;
+}
+
 export const getRandomX = (CANVAS_WIDTH: number, SPRITE_WIDTH: number) => {
   let randomX = Phaser.Math.Between(0, CANVAS_WIDTH);
 
