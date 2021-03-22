@@ -72,7 +72,7 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      title: 'TS Template App',
+      title: 'Phaser Game Template',
       template: './src/index.ejs',
       chunks: ['vendor', 'main']
     }),
