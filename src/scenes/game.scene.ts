@@ -1,14 +1,14 @@
 import { Scenes } from 'scenes/keys';
 import { Fonts } from 'fonts/keys';
 import { Sounds } from 'audio/keys';
-import { StateMachine } from 'objects/state-machine';
-import { States as PlayerStates, IdleState, JumpState } from 'objects/player';
+// import { StateMachine } from 'objects/state-machine';
+// import { States as PlayerStates, IdleState, JumpState } from 'objects/player';
 
 export class GameScene extends Phaser.Scene {
   private quitKey!: Phaser.Input.Keyboard.Key;
   private bitmapTexts: Phaser.GameObjects.BitmapText[] = [];
   private quitSound!: Phaser.Sound.BaseSound;
-  private playerStateMachine!: StateMachine;
+  // private playerStateMachine!: StateMachine;
 
   constructor() {
     super({
