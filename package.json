@@ -2,6 +2,9 @@
   "name": "phaser-starter",
   "version": "1.0.0",
   "license": "MIT",
+  "engines": {
+    "node": ">=v15.12.0"
+  },
   "scripts": {
     "dev": "webpack-dev-server --content-base src --open",
     "build": "NODE_ENV=production webpack -p",
@@ -21,6 +24,6 @@
     "webpack-dev-server": "3.11.0"
   },
   "dependencies": {
-    "phaser": "3.23.0"
+    "phaser": "3.53.1"
   }
 }
