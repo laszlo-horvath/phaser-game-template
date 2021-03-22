@@ -37,7 +37,8 @@ node_modules/
 jspm_packages/
 
 # TypeScript v1 declaration files
-typings/
+typings/phaser.d.ts
+typings/matter.d.ts
 
 # Optional npm cache directory
 .npm
