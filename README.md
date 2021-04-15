@@ -1,6 +1,6 @@
-# phaser-game-template
+# Phaser 3 Template
 
-Phaser Game Template.
+Phaser 3 boilerplate for game development using Typescript and Webpack.
 
 ## Install
 
