@@ -1,4 +1,4 @@
-import { SafeZone } from 'typings/intefaces';
+import { SafeZone } from 'typings/interfaces';
 
 export const calculateCanvasSize = () => {
   const TARGET_HEIGHT = 800;

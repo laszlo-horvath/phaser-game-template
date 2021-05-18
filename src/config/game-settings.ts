@@ -1,4 +1,4 @@
-import { SafeZone } from 'typings/intefaces';
+import { SafeZone } from 'typings/interfaces';
 import { getSafeZone } from 'config/scaling';
 
 const safeZone: SafeZone = getSafeZone();
