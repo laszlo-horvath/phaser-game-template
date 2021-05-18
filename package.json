@@ -13,10 +13,13 @@
     "typings:update": "scripts/update_p3_types.sh"
   },
   "devDependencies": {
+    "@types/redux-immutable-state-invariant": "2.1.1",
+    "@types/redux-logger": "3.0.8",
     "copy-webpack-plugin": "6.0.1",
     "html-webpack-plugin": "4.3.0",
     "promise-polyfill": "6.1.0",
     "raw-loader": "0.5.1",
+    "redux-immutable-state-invariant": "2.1.0",
     "ts-loader": "7.0.4",
     "typescript": "3.1.6",
     "webpack": "4.43.0",
@@ -24,6 +27,8 @@
     "webpack-dev-server": "3.11.0"
   },
   "dependencies": {
-    "phaser": "3.53.1"
+    "phaser": "3.53.1",
+    "redux": "4.1.0",
+    "redux-logger": "3.0.6"
   }
 }

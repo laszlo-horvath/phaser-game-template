@@ -37,10 +37,11 @@ module.exports = {
 
       // src
       config: path.resolve(__dirname, 'src/config/'),
-      prefabs: path.resolve(__dirname, 'src/prefabs'),
-      typings: path.resolve(__dirname, 'src/typings'),
-      objects: path.resolve(__dirname, 'src/objects'),
-      scenes: path.resolve(__dirname, 'src/scenes'),
+      prefabs: path.resolve(__dirname, 'src/prefabs/'),
+      typings: path.resolve(__dirname, 'src/typings/'),
+      objects: path.resolve(__dirname, 'src/objects/'),
+      scenes: path.resolve(__dirname, 'src/scenes/'),
+      store: path.resolve(__dirname, 'src/redux/'),
     }
   },
 

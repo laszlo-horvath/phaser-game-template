@@ -30,6 +30,7 @@
         "config/*": ["./src/config/*"],
         "scenes/*": ["./src/scenes/*"],
         "objects/*": ["./src/objects/*"],
+        "store/*": ["./src/redux/*"],
       }
 
     }

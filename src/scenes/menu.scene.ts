@@ -2,6 +2,8 @@ import { Scenes } from 'scenes/keys';
 import { Fonts } from 'fonts/keys';
 import { Sounds } from 'audio/keys';
 import { Sprites } from 'sprites/keys';
+import { store } from 'store/store';
+import { SOUND_SET, SOUND_TOGGLE } from 'store/actions';
 
 export class MenuScene extends Phaser.Scene {
   private startKey!: Phaser.Input.Keyboard.Key;
@@ -21,6 +23,12 @@ export class MenuScene extends Phaser.Scene {
 
   create() {
     console.log(`create ${Scenes.MENU}`);
+
+    const unsubscribe = store.subscribe(() => {
+      console.log('[REDUX] State changed. New state:', store.getState());
+    });
+
+    store.dispatch({ type: SOUND_SET, payload: { sound: !this.game.sound.mute } });
 
     this.addTexts();
     this.addSprites();
@@ -42,6 +50,7 @@ export class MenuScene extends Phaser.Scene {
     volumeSprite.on('pointerup', () => {
       this.game.sound.mute = !this.game.sound.mute;
       volumeSprite.setFrame(this.game.sound.mute ? 0 : 1);
+      store.dispatch({ type: SOUND_TOGGLE });
     });
   }
 
