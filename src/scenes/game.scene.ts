@@ -33,6 +33,19 @@ export class GameScene extends Phaser.Scene {
     // }, [this, this.player]);
   }
 
+  shutdown() {
+    console.log(`shutdown ${Scenes.GAME}`);
+  }
+
+  update() {
+    if (this.quitKey.isDown) {
+      console.log('Quiting the game.');
+      this.quitSound.play();
+      this.scene.stop();
+      this.scene.start(Scenes.MENU);
+    }
+  }
+
   addTexts() {
     const centerX = this.sys.canvas.width / 2;
     const centerY = this.sys.canvas.height / 2;
@@ -46,16 +59,17 @@ export class GameScene extends Phaser.Scene {
     this.bitmapTexts.push(pressEscText);
   }
 
-  shutdown() {
-    console.log(`shutdown ${Scenes.GAME}`);
+  pauseGame() {
+    if (this.scene.isActive() && this.scene.isVisible()) {
+      // this.stopMusic();
+      this.scene.pause();
+    }
   }
 
-  update() {
-    if (this.quitKey.isDown) {
-      console.log('Quiting the game.');
-      this.quitSound.play();
-      this.scene.stop();
-      this.scene.start(Scenes.MENU);
+  resumeGame() {
+    if (this.scene.isPaused() && this.scene.isVisible()) {
+      // this.startMusic();
+      this.scene.resume();
     }
   }
 }
