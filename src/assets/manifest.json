@@ -1,0 +1,25 @@
+{
+    "short_name": "Phaser 3 Template",
+    "name": "Phaser 3 Boilerplate Typescript",
+
+    "icons": [
+        {
+            "src": "icon_64x64.png",
+            "sizes": "64x64",
+            "type": "image/png"
+        },
+        {
+            "src": "icon_128x128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        }
+    ],
+
+    "start_url": "/index.html",
+
+    "display": "standalone",
+    "orientation": "portrait",
+
+    "background_color": "#000",
+    "theme_color": "#000"
+}
