@@ -13,7 +13,7 @@ module.exports = {
 
   entry: {
     main: [
-      './src/game.ts',
+      './src/init.ts',
     ],
     vendor: ['phaser']
   },
